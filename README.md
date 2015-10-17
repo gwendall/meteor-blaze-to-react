@@ -20,7 +20,7 @@ Example
 -------
 
 ```html
-<template name="posts">
+<template name="fruitsList">
   <ul>
     {{#each items}}
       <li>{{this}}</li>
@@ -32,6 +32,6 @@ Example
 ```javascript
 var items = ['peers', 'bananas', 'apples'];
 Meteor.startup(function() {
-  React.render(<BlazeToReact blazeTemplate="posts" items={items}/>, document.body);
+  React.render(<BlazeToReact blazeTemplate="fruitsList" items={items}/>, document.body);
 });
 ```

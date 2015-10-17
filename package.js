@@ -5,7 +5,7 @@ Package.describe({
   version: '0.1.0'
 });
 
-Package.onUse(function (api, where) {
+Package.onUse(function(api, where) {
   api.versionsFrom('1.2');
   api.use([
     'react@0.1.13',
