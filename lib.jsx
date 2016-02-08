@@ -12,6 +12,10 @@ BlazeToReact = React.createClass({
     this.renderBlaze();
     return this.props;
   },
+  componentDidUpdate() {
+    // Needed when used with a conditional show, like {condition ? <BlazeToCreact ../> : null}
+    this.renderBlaze();
+  },
   componentDidMount() {
     this.renderBlaze();
   },
