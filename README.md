@@ -10,6 +10,15 @@ Installation
 meteor add gwendall:blaze-to-react
 ```
 
+Note:
+
+* For Meteor 1.2, use the latest 0.x.x release.  It relies on the `react`
+package.
+
+* For Meteor 1.3+, use the latest 1.x.x release.  It relies on react from npm.
+`<BlazeToReact>` is still provided as a global for convenience.  But if you
+want, you can `import BlazeToReact from 'meteor/gwendall:blaze-to-react';`
+
 How it works
 -----------
 
