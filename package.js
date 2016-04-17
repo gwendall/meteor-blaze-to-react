@@ -6,12 +6,12 @@ Package.describe({
 });
 
 Package.onUse(function(api, where) {
-  api.versionsFrom('1.2');
+  api.use('react-runtime@15.0.1');
   api.use([
-    'react@0.14.1_1',
-    'templating@1.1.5', 
+    'templating@1.1.5',
     'underscore@1.0.4'
   ]);
-  api.addFiles('lib.jsx');
+
+  api.addFiles('lib.js', ['client']);
   api.export('BlazeToReact');
 });
