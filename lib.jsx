@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 BlazeToReact = React.createClass({
   mixins: [ReactMeteorData],
   renderBlaze() {
@@ -22,3 +25,5 @@ BlazeToReact = React.createClass({
     return <div ref={this.props.blazeTemplate}/>
   }
 });
+
+export default BlazeToReact;
