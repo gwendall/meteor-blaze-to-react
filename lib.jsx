@@ -12,7 +12,10 @@ BlazeToReact = React.createClass({
   },
   getMeteorData() {
     // Ensure a re-rendering of the template if a prop changes
-    this.renderBlaze();
+    
+    if (this._isMounted) {
+      this.renderBlaze();
+    }
     return this.props;
   },
   componentDidUpdate() {
@@ -20,9 +23,11 @@ BlazeToReact = React.createClass({
     this.renderBlaze();
   },
   componentDidMount() {
+    this._isMounted = true;
     this.renderBlaze();
   },
   componentWillUnmount() {
+    this._isMounted = false;
     this.removeBlaze();
   },
   render() {
